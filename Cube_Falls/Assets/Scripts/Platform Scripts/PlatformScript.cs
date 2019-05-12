@@ -35,7 +35,7 @@ public class PlatformScript : MonoBehaviour {
     }
 
     void BreakableDeactivate(){
-        Invoke("DeactivateGameObject", 0.5f);
+        Invoke("DeactivateGameObject", 0.35f);
     }
 
     void DeactivateGameObject(){
