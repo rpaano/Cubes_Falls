@@ -36,11 +36,19 @@ public class PlayerBounds : MonoBehaviour {
 
                 out_Of_Bounds = true;
 
-                //SoundManager.instance.DeathSound();
-                //GameManager.instance.RestartGame();
+                SoundManager.instance.DeathSound();
+                GameManager.instance.RestartGame();
             }
-
         }
+    }
 
+    void OnTriggerEnter2D(Collider2D targer){
+
+        if(targer.tag == "TopSpike") {
+
+            transform.position = new Vector2(1000f, 1000f);
+            SoundManager.instance.DeathSound();
+            GameManager.instance.RestartGame();
+        }
     }
 }
