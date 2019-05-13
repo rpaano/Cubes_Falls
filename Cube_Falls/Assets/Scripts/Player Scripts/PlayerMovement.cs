@@ -21,14 +21,22 @@ public class PlayerMovement : MonoBehaviour {
 
     void Move(){
 
-        if (Input.GetAxisRaw("Horizontal") > 0f){
-            myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
-        }
-
-        if (Input.GetAxisRaw("Horizontal") < 0f)
+        if (Input.touchCount > 0)
         {
-            myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
+            Touch touch = Input.GetTouch(0);
+            Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+
+            if (touchPosition.x > 0)
+            {
+                myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
+            }
+
+            if (touchPosition.x < 0)
+            {
+                myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
+            }
         }
+            
     }
 
     public void PlatformMove(float x){
