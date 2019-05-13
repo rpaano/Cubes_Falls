@@ -3,7 +3,12 @@ guid: 6a82fc8dc80f3564e899c08250f88e4f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - soundFX: {instanceID: 0}
+  - landClip: {fileID: 8300000, guid: 3d704cb8d373ac24892742197faa7b7b, type: 3}
+  - deathClip: {fileID: 8300000, guid: 05ddeb7ffea52d241afee07f5884e01f, type: 3}
+  - iceBreakClip: {fileID: 8300000, guid: 907e6b1c526c01f4cb602b6513ecf39a, type: 3}
+  - gameOverClip: {fileID: 8300000, guid: be4eb2ae139b488479b37c0fcfe3fb6c, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

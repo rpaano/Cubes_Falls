@@ -25,10 +25,31 @@ public class PlatformSpawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         SpawnPlatforms();
-
     }
 
     void SpawnPlatforms() {
+
+        //aspect ratio
+        if (Camera.main.aspect <= 0.5)
+        {
+            Debug.Log("18:9");
+            Debug.Log(Camera.main.aspect);
+            min_X = -1.46f;
+            max_X = 1.46f;
+        }
+        else if (Camera.main.aspect < 0.6)
+        {
+            Debug.Log("16:9");
+            Debug.Log(Camera.main.aspect);
+            min_X = -1.8f;
+            max_X = 1.8f;
+        }
+        else
+        {
+            Debug.Log("4:8");
+            Debug.Log(Camera.main.aspect);
+            //Do nothing!!
+        }
 
         current_Platform_Spawn_Timer += Time.deltaTime;
 

@@ -69,6 +69,16 @@ public class PlatformScript : MonoBehaviour {
             if (is_Platform) {
                 SoundManager.instance.LandSound();
             }
+
+            if (moving_Platform_Left)
+            {
+                SoundManager.instance.LandSound();
+            }
+
+            if (moving_Platform_Right)
+            {
+                SoundManager.instance.LandSound();
+            }
         }
     }
 

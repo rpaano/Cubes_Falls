@@ -1384,7 +1384,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dfeb0225c134a104c8fc7942de2d955a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1552,6 +1552,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4721615564300024, guid: ee81a59e970346c4a930fa81402c651a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50539930659731622, guid: ee81a59e970346c4a930fa81402c651a,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50539930659731622, guid: ee81a59e970346c4a930fa81402c651a,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50539930659731622, guid: ee81a59e970346c4a930fa81402c651a,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50539930659731622, guid: ee81a59e970346c4a930fa81402c651a,
+        type: 3}
+      propertyPath: m_SleepingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50539930659731622, guid: ee81a59e970346c4a930fa81402c651a,
+        type: 3}
+      propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

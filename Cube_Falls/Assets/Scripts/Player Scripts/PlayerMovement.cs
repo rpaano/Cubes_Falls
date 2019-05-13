@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Move(){
 
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0f)
         {
             Touch touch = Input.GetTouch(0);
             Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
@@ -36,7 +36,18 @@ public class PlayerMovement : MonoBehaviour {
                 myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
             }
         }
-            
+
+        if (Input.GetAxisRaw("Horizontal") > 0f)
+        {
+            myBody.velocity = new Vector2(moveSpeed, myBody.velocity.y);
+        }
+
+        if (Input.GetAxisRaw("Horizontal") < 0f)
+        {
+            myBody.velocity = new Vector2(-moveSpeed, myBody.velocity.y);
+        }
+        
+
     }
 
     public void PlatformMove(float x){
